@@ -1,0 +1,79 @@
+@import "./src/assets/scss/mixin.scss";
+
+.login {
+  .mfp-hide {
+    // display: none!important;
+    display: block !important;
+  }
+
+  .form-login {
+    padding: 24px 0 85px;
+    @media screen and (min-width: 551px) {
+      padding: 116px 0 131px 10px;
+    }
+    .popup {
+      background: $linen;
+      max-width: 436px;
+      max-height: 425px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 14px 20px 109px;
+      @media screen and (min-width: 551px) {
+        padding: 44px 58px 97px;
+        max-height: 418px;
+        margin-bottom: 13px;
+      }
+
+      .title-page {
+        margin-bottom: 15px;
+        @media screen and (max-width: 550px) {
+          font-size: 38px;
+          margin-bottom: 40px;
+        }
+      }
+
+      input {
+        @media screen and (max-width: 550px) {
+          text-align: center;
+        }
+      }
+
+      input:not([type="submit"]) {
+        padding: 22px 17px;
+      }
+
+      input:nth-child(2) {
+        margin-bottom: 12px;
+      }
+
+      .btn-link {
+        // background: #fafaf8;
+        background: #fff;
+        border: 1px solid transparent;
+        margin-top: 35px;
+        padding: 12px 57px;
+
+        &:hover {
+          border: 1px solid $black;
+        }
+      }
+    }
+  }
+
+  .form__exclusive,
+  .trial {
+    display: none;
+  }
+
+  // .follow {
+  //   .flex {
+  //     padding: 23px 0;
+  //   }
+  // }
+
+  @media screen and (max-width: 550px) {
+    .center {
+      padding: 0 23px;
+    }
+  }
+}

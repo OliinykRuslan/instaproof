@@ -1,0 +1,160 @@
+@import "./src/assets/scss/mixin.scss";
+
+html {
+  height: 100%;
+}
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  font-size: 14px;
+  min-height: 100%;
+}
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  &::selection {
+    background: #e8334d;
+    color: #fff;
+  }
+}
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-family: "bw_vivantregular", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  line-height: 14px;
+  font-weight: 300;
+  font-style: normal;
+  border-bottom: 1px transparent;
+  @include transition;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    font-weight: 900;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+h1 {
+  font-size: 56px;
+  font-family: "gt_sectra_displaylight", sans-serif;
+  line-height: 70px;
+}
+h2 {
+  font-size: 32px;
+  font-family: "gt_sectra_displaylight", sans-serif;
+  line-height: 48px;
+}
+h3 {
+  font-size: 40px;
+  font-family: "gt_sectra_displaylight", sans-serif;
+  line-height: 49px;
+}
+h4 {
+  font-family: "cormorantitalic", sans-serif;
+  font-size: 27px;
+  line-height: 33px;
+}
+h5 {
+  font-family: "cormorantlight", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+h6 {
+  font-family: "bw_vivantregular", sans-serif;
+  font-size: 10px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+p {
+  font-family: "cormorantitalic", sans-serif;
+  font-size: 17px;
+  line-height: 27px;
+
+  & + p {
+    margin-top: 20px;
+  }
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  appearance: none;
+}
+input {
+  appearance: none;
+  font-family: "cormorantlight", sans-serif;
+}
+input:not([type="submit"]) {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  height: 43px;
+  padding: 0 5px;
+  font-size: 16px;
+}
+textarea {
+  max-width: 100%;
+  outline: none;
+  border: 1px solid #030404;
+  display: block;
+  padding: 14px 18px;
+  min-height: 129px;
+  border-radius: 0;
+  box-shadow: none;
+  max-height: 129px;
+  font-size: 16px;
+  width: 100%;
+  resize: none;
+  background: transparent;
+}
+address {
+  font-style: normal;
+}
+strong {
+  font-weight: 700;
+}
+::-webkit-input-placeholder {
+  color: $dark-grey;
+}
+::-moz-placeholder {
+  color: $dark-grey;
+}
+:-moz-placeholder {
+  color: $dark-grey;
+}
+:-ms-input-placeholder {
+  color: $dark-grey;
+}
+
+@media screen and (max-width: 500px) {
+  textarea {
+    min-height: 150px !important;
+  }
+}

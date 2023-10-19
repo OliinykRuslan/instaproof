@@ -1,0 +1,76 @@
+@import "./src/assets/scss/mixin.scss";
+
+.sign__up {
+  .form-sign {
+    padding: 117px 0 121px;
+    .popup {
+      background: $seashell;
+      max-width: 845px;
+      margin: 0 auto;
+      padding: 42px 80px 60px;
+      text-align: center;
+
+      h1 {
+        padding-bottom: 17px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      input:not([type="submit"]) {
+        padding: 0 15px;
+      }
+
+      input {
+        margin-bottom: 16px;
+      }
+
+      .flex {
+        margin: 40px -10px;
+        & > * {
+          margin: 0 25px;
+        }
+      }
+
+      .btn-link {
+        padding: 14px 60px;
+        margin-top: 9px;
+        border: none;
+        background: #fff;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .form-sign {
+      .popup {
+        padding: 42px 20px 60px;
+
+        h1 {
+          font-size: 38px;
+          line-height: 47px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .form-sign {
+      padding: 117px 0;
+      .popup {
+        padding: 29px 22px 47px;
+        .flex {
+          flex-direction: column;
+          & > * {
+            margin: 0 10px;
+          }
+
+          input {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

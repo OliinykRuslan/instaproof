@@ -1,0 +1,340 @@
+@import "./src/assets/scss/mixin.scss";
+
+.contact {
+  .main-header {
+    border-bottom: none;
+  }
+  .contact-text {
+    text-align: center;
+    background: #faf8f2;
+    padding: 25px 0 0;
+    @media screen and (min-width: 550px) {
+      padding: 95px 0 90px;
+    }
+
+    h1 {
+      font-size: 42px;
+      @media screen and (min-width: 550px) {
+        font-size: 55px;
+        line-height: 48px;
+      }
+    }
+    h5 {
+      padding-top: 13px;
+      max-width: 570px;
+      margin: 0 auto;
+      @media screen and (min-width: 550px) {
+        padding-top: 37px;
+      }
+    }
+  }
+  .post {
+    padding: 85px 0 93px 0;
+    @media screen and (min-width: 550px) {
+      padding: 85px 0 93px 10px;
+    }
+    .center {
+      max-width: 905px;
+    }
+    .flex {
+      justify-content: space-between;
+    }
+
+    .item {
+      text-align: center;
+      max-width: 200px;
+      .photo {
+        position: relative;
+        margin: 0 auto;
+        min-width: 79px;
+        width: 79px;
+        height: 79px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          width: 79px;
+          height: 79px;
+          background: $seashell;
+          border-radius: 50%;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      h6 {
+        font-size: 11px;
+        padding: 25px 0 19px;
+      }
+      .link {
+        font-family: "cormorantitalic", sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        border-bottom: 2px solid $cornsilk;
+        padding: 14px 0;
+        margin-top: 17px;
+        margin-bottom: 47px;
+      }
+    }
+
+    .aside {
+      font-size: 9px;
+      @media screen and (min-width: 550px) {
+        padding: 13px 26px;
+      }
+    }
+
+    h5 {
+      font-size: 21px;
+    }
+  }
+
+  .form-block {
+    background: $seashell;
+    .flex {
+      align-items: stretch;
+    }
+    .text {
+      margin-left: 218px;
+      margin-top: 20px;
+      max-width: 350px;
+
+      position: relative;
+      padding: 30px 0;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      h2 {
+        font-size: 42px;
+        margin-left: -11px;
+      }
+      p {
+        font-family: "bw_vivantregular", sans-serif;
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 24px 0 50px;
+        @media screen and (min-width: 651px) {
+          max-width: 305px;
+          padding: 24px 0;
+        }
+      }
+      textarea {
+        margin: 30px 0;
+        max-width: 305px;
+      }
+      form {
+        max-width: 288px;
+      }
+      .photo-quest {
+        display: none;
+      }
+    }
+    .image {
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        display: block;
+        max-height: 642px;
+      }
+    }
+
+    .btn-link {
+      background: $white;
+      width: 100%;
+      border: 1px transparent;
+      &:hover {
+        border: 1px solid $black;
+      }
+    }
+  }
+
+  .questions {
+    border-bottom: 0.5px solid #000;
+    padding: 83px 0 92px 10px;
+
+    .center {
+      max-width: 862px;
+    }
+
+    h2 {
+      font-size: 42px;
+      text-align: center;
+      margin-bottom: 35px;
+      @media screen and (min-width: 851px) {
+        margin-bottom: 42px;
+      }
+    }
+    .accordion__faq {
+      width: 100%;
+      background: transparent;
+    }
+    .link__faq {
+      font-family: "bw_vivantregular", sans-serif;
+      text-transform: uppercase;
+      font-size: 11px;
+      line-height: 15px;
+      letter-spacing: 1.65px;
+      padding: 28px 40px;
+      background: #faf8f2;
+      margin: 10px 0;
+      cursor: pointer;
+      @media screen and (max-width: 850px) {
+        text-align: center;
+      }
+    }
+
+    .submenu {
+      display: none;
+      font-family: "bw_vivantregular", sans-serif;
+      font-size: 11px;
+      line-height: 15px;
+      letter-spacing: 1.65px;
+      padding: 10px 40px;
+    }
+  }
+
+  .trial {
+    padding-top: 95px;
+    padding-bottom: 87px;
+    @media screen and (max-width: 650px) {
+      padding-top: 60px;
+      padding-bottom: 65px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .form-block {
+      .flex {
+        margin-left: 0;
+      }
+      .text > * {
+        padding: 0 50px;
+      }
+
+      .text {
+        margin-left: 50px;
+        max-width: 423px;
+      }
+
+      .image {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    .post {
+      .flex {
+        flex-flow: wrap;
+      }
+      .item {
+        padding: 0 50px;
+        max-width: 100%;
+      }
+    }
+
+    .form-block {
+      .flex > * {
+        margin: 0 auto;
+      }
+      .text {
+        & > * {
+          padding: 0 30px;
+        }
+        textarea {
+          // max-height: 70px;
+          // min-height: 70px;
+          max-height: 198px;
+        }
+
+        form {
+          margin: 0 auto;
+        }
+      }
+    }
+    .questions {
+      padding: 52px 0 0;
+      border-bottom: none;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .form-block {
+      .flex {
+        margin: 0;
+        flex-direction: column;
+      }
+      .text {
+        text-align: center;
+        padding: 50px 0 57px;
+        & > * {
+          padding: 0;
+        }
+        .photo-quest {
+          display: none;
+        }
+        input,
+        textarea {
+          text-align: center;
+          margin-bottom: 14px;
+          max-width: 100%;
+        }
+        textarea {
+          margin: 15px 0 20px;
+        }
+        .photo {
+          max-height: 400px;
+          overflow: hidden;
+          .photo-quest {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        form {
+          max-width: 100%;
+        }
+      }
+
+      .image {
+        max-height: 300px;
+        img {
+          max-height: 300px;
+        }
+      }
+    }
+    .post {
+      .item {
+        padding: 0 25px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .form-block {
+      .image {
+        max-height: 300px;
+        img {
+          max-height: 253px;
+        }
+      }
+    }
+
+    .follow {
+      padding: 37px 0;
+
+      .flex {
+        padding: 33px 0;
+      }
+    }
+  }
+}
